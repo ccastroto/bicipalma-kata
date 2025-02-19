@@ -1,5 +1,5 @@
 package edu.asestatuas.appalma;
-import edu.asestatuas.domain.Estacion.Estacion;
+import edu.asestatuas.domain.estacion.Estacion;
 
 public class BiciPalma {
     public static void main(String[] args) {
