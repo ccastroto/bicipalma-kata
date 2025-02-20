@@ -23,7 +23,8 @@ public class Estacion {
     @Override
     public String toString(){
         return  "id:" + getId() + '\n' +
-                "direccion:" + getDireccion() + '\n';
+                "direccion:" + getDireccion() + '\n' +
+                "numeroAnclajes:" + numAnclajes();
     }
     private Anclaje[] anclajes(){
         return this.anclajes.anclajes();
