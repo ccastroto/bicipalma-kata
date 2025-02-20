@@ -36,7 +36,7 @@
             <index>true</index>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>edu.asestatuas.Appalma</mainClass>
+              <mainClass>edu.asestatuas.appalma.BiciPalma</mainClass>
             </manifest>mvn -X
             <manifestEntries>
               <mode>development</mode>
