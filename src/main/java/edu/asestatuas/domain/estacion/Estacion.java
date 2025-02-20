@@ -40,10 +40,6 @@ public class Estacion {
         for (Anclaje anclaje : anclajes()) {
             anclajesLibres++;
         }
-        /* el for actúa como este for de forma más reducida que este:
-        for(Anclaje anclaje : anclajes()){
-            anclajesLibres = anclaje.isOcupado? anclajesLibres: anclajesLibres+1;
-        }*/
         return anclajesLibres;
     }
 
