@@ -21,4 +21,10 @@ public class TarjertaUsuarioTest {
         tarjertausuario.setActiva(true);
         assertTrue(tarjertausuario.isActiva());
     }
+    @Test
+    public void tets_toString(){
+        String id = "juan";
+        String representarIdUsuario = tarjertausuario.toString();
+        assertEquals(id, representarIdUsuario);
+    }
 }
