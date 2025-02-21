@@ -22,6 +22,7 @@ public class BicicletaTest {
         // ASSERT
         assertEquals(idExpected, id);
     }
+    @Test
     public void test_toString_bicicleta() {
         // ARRANGE
         String id = "101";
