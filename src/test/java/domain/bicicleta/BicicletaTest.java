@@ -22,4 +22,12 @@ public class BicicletaTest {
         // ASSERT
         assertEquals(idExpected, id);
     }
+    public void test_toString_bicicleta() {
+        // ARRANGE
+        String id = "101";
+        // ACT
+        String representarIdBici = bicicleta.toString();
+        // ASSERT
+        assertEquals(id, representarIdBici);
+    }
 }
