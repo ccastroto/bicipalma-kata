@@ -13,5 +13,9 @@ public class TarjertaUsuario {
     public boolean isActiva() {
         return this.activo;
     }
+    public void setActiva(boolean activo) {
+        this.activo = activo;
+    }
+
 
 }
