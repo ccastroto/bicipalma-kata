@@ -17,5 +17,8 @@ public class TarjertaUsuario {
         this.activo = activo;
     }
 
-
+    @Override
+    public String toString() {
+        return this.id;
+    }
 }
