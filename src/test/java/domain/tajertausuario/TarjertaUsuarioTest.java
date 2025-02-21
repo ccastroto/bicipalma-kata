@@ -16,4 +16,9 @@ public class TarjertaUsuarioTest {
     public void test_isActiva(){
         assertTrue(tarjertausuario.isActiva());
     }
+    @Test
+    public void test_setActiva(){
+        tarjertausuario.setActiva(true);
+        assertTrue(tarjertausuario.isActiva());
+    }
 }
