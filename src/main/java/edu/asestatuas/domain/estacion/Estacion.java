@@ -1,6 +1,7 @@
 package edu.asestatuas.domain.estacion;
 
 
+import edu.asestatuas.domain.bicicleta.Bicicleta;
 
 public class Estacion {
 
@@ -44,6 +45,9 @@ public class Estacion {
     }
 
     public void consultarAnclajes() {
+        System.out.println(this);
+    }
+    public void anclarBicicleta(Bicicleta bici) {
         System.out.println(this);
     }
 }
