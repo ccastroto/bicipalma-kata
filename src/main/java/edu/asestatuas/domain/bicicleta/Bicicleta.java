@@ -10,6 +10,7 @@ public class Bicicleta {
     public int getId() {
         return this.id;
     }
+
     @Override
     public String toString() {
         return Integer.toString(getId());
