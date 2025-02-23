@@ -38,13 +38,16 @@ public class AnclajeTest {
    }
    @Test
     public void test_liberar_bicicleta(){
+        // Anclarla
         anclaje.anclarBici(bici);
+        // Verificarlo
         assertTrue(anclaje.isOcupado());
         assertNotNull(anclaje.getBici());
-
+        // Liberarla
         anclaje.liberarBici();
-
+        // Verificarla
         assertFalse(anclaje.isOcupado());
-       assertEquals(null, anclaje.getBici());
+        assertEquals(null, anclaje.getBici());
    }
+
 }
