@@ -22,6 +22,7 @@ public class Anclaje {
     }
     public void liberarBici(){
         this.bici = null;
+        this.ocupado = false;
     }
     public String toString(){
         return "ocupado: " + Boolean.toString(isOcupado());
