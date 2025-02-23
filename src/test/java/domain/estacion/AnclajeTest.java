@@ -49,5 +49,13 @@ public class AnclajeTest {
         assertFalse(anclaje.isOcupado());
         assertEquals(null, anclaje.getBici());
    }
-
+    @Test
+    public void test_toString_anclaje(){
+        // ARANGE
+        String id = "101";
+        // ACT
+        String idBici = this.bici.toString();
+        // ASSERT
+        assertEquals(idBici, id);
+    }
 }
