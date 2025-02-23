@@ -14,7 +14,7 @@ public class AnclajeTest {
     @Before
     public void setup_anclaje() {
         anclaje = new Anclaje();
-        bici = new Bicicleta(101); //Simular biciº
+        bici = new Bicicleta(101);
     }
 
     @Test
@@ -32,8 +32,19 @@ public class AnclajeTest {
        assertFalse(anclaje.isOcupado());
        // Se ancla
        anclaje.anclarBici(bici);
-       // Check si está ocupado y bici asignada
+       // Check
        assertTrue(anclaje.isOcupado());
        assertEquals(bici, anclaje.getBici());
+   }
+   @Test
+    public void test_liberar_bicicleta(){
+        anclaje.anclarBici(bici);
+        assertTrue(anclaje.isOcupado());
+        assertNotNull(anclaje.getBici());
+
+        anclaje.liberarBici();
+
+        assertFalse(anclaje.isOcupado());
+       assertEquals(null, anclaje.getBici());
    }
 }
