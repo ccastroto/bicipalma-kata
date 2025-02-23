@@ -17,4 +17,8 @@ public class AnclajeTest {
         assertFalse(anclaje.isOcupado());
         assertEquals(anclaje.isOcupado(),false);
     }
+    @Test
+    public void test_coge_bicicleta(){
+        assertNotEquals(anclaje.getBici(), "");
+    }
 }
