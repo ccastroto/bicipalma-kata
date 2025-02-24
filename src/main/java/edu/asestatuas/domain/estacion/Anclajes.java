@@ -1,10 +1,10 @@
 package edu.asestatuas.domain.estacion;
 
-class Anclajes {
+public class Anclajes {
 
     private final Anclaje[] anclajes;
 
-    Anclajes (int numAnclajes) {
+    public Anclajes(int numAnclajes) {
         this.anclajes = new Anclaje[numAnclajes];
         crearAnclajes();
     }
@@ -13,10 +13,10 @@ class Anclajes {
                 this.anclajes[i] = new Anclaje();
         }
     }
-    Anclaje[] anclajes() {
+    public Anclaje[] anclajes() {
         return this.anclajes;
     }
-    int numAnclajes() {
+    public int numAnclajes() {
         return this.anclajes.length;
     }
 }
