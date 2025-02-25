@@ -56,7 +56,17 @@ public class AnclajesTest {
         int posicion = 3;
         // Esta definido la posición ocupada y libera
         anclajes.liberarAnclaje(posicion);
-        //Chack si la posición definida está liberada
+        // Check si la posición definida está liberada
         assertFalse(anclajes.anclajes()[posicion].isOcupado());
+    }
+    @Test
+    public void testgetBiciAt(){
+        int posicion = 3;
+        // Debe devolver null
+        assertNull(anclajes.getBiciAt(posicion));
+        // Ocuparlo
+        anclajes.ocuparAnclaje(posicion, bici);
+        // Check si es correcta la bici
+        assertEquals(bici, anclajes.getBiciAt(posicion));
     }
 }
