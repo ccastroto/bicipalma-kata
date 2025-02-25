@@ -1,8 +1,11 @@
 package edu.asestatuas.domain.estacion;
 
+import edu.asestatuas.domain.bicicleta.Bicicleta;
+
 public class Anclajes {
 
     private final Anclaje[] anclajes;
+    private int bicicleta;
 
     public Anclajes(int numAnclajes) {
         this.anclajes = new Anclaje[numAnclajes];
@@ -18,5 +21,8 @@ public class Anclajes {
     }
     public int numAnclajes() {
         return this.anclajes.length;
+    }
+    public void ocuparAnclaje(int posicion, Bicicleta bicicleta){
+        this.anclajes[posicion].anclarBici(bicicleta);
     }
 }
