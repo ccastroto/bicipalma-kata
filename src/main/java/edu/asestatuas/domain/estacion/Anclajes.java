@@ -25,4 +25,7 @@ public class Anclajes {
     public void ocuparAnclaje(int posicion, Bicicleta bicicleta){
         this.anclajes[posicion].anclarBici(bicicleta);
     }
+    public boolean isAnclajeOcupado(int posicion){
+        return this.anclajes[posicion].isOcupado();
+    }
 }
