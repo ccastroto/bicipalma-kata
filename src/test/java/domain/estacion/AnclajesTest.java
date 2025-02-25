@@ -76,6 +76,13 @@ public class AnclajesTest {
         assertTrue(posicion >= 0 && posicion < NUM_ANCLAJES);
         // Check si da lo mismo de que lo espera a lo que es.
         assertEquals(5,5);
+    }
+    @Test
+    public void testToStringAnclajes(){
+        // ACT
+        String idAnclaje = anclajes.toString();
+        // ASSERT
+        assertNotNull(idAnclaje);
 
     }
 }
