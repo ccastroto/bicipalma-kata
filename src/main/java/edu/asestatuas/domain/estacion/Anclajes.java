@@ -1,6 +1,7 @@
 package edu.asestatuas.domain.estacion;
 
 import edu.asestatuas.domain.bicicleta.Bicicleta;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Anclajes {
 
@@ -33,5 +34,9 @@ public class Anclajes {
     }
     public Bicicleta getBiciAt(int posicion){
         return this.anclajes[posicion].getBici();
+    }
+    public int seleccionarAnclaje(){
+        int totalAnclajes = numAnclajes();
+        return ThreadLocalRandom.current().nextInt(0, totalAnclajes);
     }
 }
