@@ -28,4 +28,7 @@ public class Anclajes {
     public boolean isAnclajeOcupado(int posicion){
         return this.anclajes[posicion].isOcupado();
     }
+    public void liberarAnclaje(int posicion){
+        this.anclajes[posicion].liberarBici();
+    }
 }
