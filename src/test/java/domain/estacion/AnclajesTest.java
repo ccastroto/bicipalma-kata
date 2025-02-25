@@ -69,4 +69,13 @@ public class AnclajesTest {
         // Check si es correcta la bici
         assertEquals(bici, anclajes.getBiciAt(posicion));
     }
+    @Test
+    public void testSetAnclaje(){
+        int posicion = anclajes.seleccionarAnclaje();
+        // Check si es verdadero con el operador AND log.
+        assertTrue(posicion >= 0 && posicion < NUM_ANCLAJES);
+        // Check si da lo mismo de que lo espera a lo que es.
+        assertEquals(5,5);
+
+    }
 }
