@@ -5,7 +5,7 @@ import edu.asestatuas.domain.bicicleta.Bicicleta;
 public class Anclajes {
 
     private final Anclaje[] anclajes;
-    private int bicicleta;
+
 
     public Anclajes(int numAnclajes) {
         this.anclajes = new Anclaje[numAnclajes];
@@ -30,5 +30,8 @@ public class Anclajes {
     }
     public void liberarAnclaje(int posicion){
         this.anclajes[posicion].liberarBici();
+    }
+    public Bicicleta getBiciAt(int posicion){
+        return this.anclajes[posicion].getBici();
     }
 }
