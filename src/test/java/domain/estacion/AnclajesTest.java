@@ -45,4 +45,10 @@ public class AnclajesTest {
         // Check anclaje posición tiene la bici
         assertEquals(bici, anclajes.anclajes()[posicion].getBici());
     }
+    @Test
+    public void testisAnclajeOcupado(){
+        assertFalse(anclajes.isAnclajeOcupado(0));
+        assertFalse(anclajes.isAnclajeOcupado(1));
+        assertFalse(anclajes.isAnclajeOcupado(5));
+    }
 }
