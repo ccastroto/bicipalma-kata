@@ -51,4 +51,12 @@ public class AnclajesTest {
         assertFalse(anclajes.isAnclajeOcupado(1));
         assertFalse(anclajes.isAnclajeOcupado(5));
     }
+    @Test
+    public void testLiberarAnclaje(){
+        int posicion = 3;
+        // Esta definido la posición ocupada y libera
+        anclajes.liberarAnclaje(posicion);
+        //Chack si la posición definida está liberada
+        assertFalse(anclajes.anclajes()[posicion].isOcupado());
+    }
 }
