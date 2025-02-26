@@ -12,12 +12,14 @@ public class EstacionTest {
     private  Estacion estacion;
     private Anclajes anclajes;
     private Anclaje anclaje;
-    private  TarjertaUsuario tarjertaUsuario;
+    private  TarjertaUsuario autenticacion;
     private  Bicicleta bici;
     private Bicicleta biciDos;
     private static final int ID_ESTACION = 101;
     private static final String direccion = "Mallorca 33";
     private static final int NUM_ANCLAJES = 6;
+    private static final String USUARIO = "123K3";
+
 
     @Before
     public void setUp_estacion(){
@@ -25,6 +27,7 @@ public class EstacionTest {
         anclajes = new Anclajes(NUM_ANCLAJES);
         bici = new Bicicleta(101);
         biciDos = new Bicicleta(102);
+        autenticacion = new TarjertaUsuario(USUARIO,true);
     }
     @Test
     public void testEstacion(){
@@ -53,5 +56,12 @@ public class EstacionTest {
         assertNotEquals(NUM_ANCLAJES -1, estacion.anclajesLibres());
         estacion.anclarBicicleta(biciDos);
         assertNotEquals(NUM_ANCLAJES -1, estacion.anclajesLibres());
+    }
+    @Test
+    public void testLeerTarjertaUsuario(){
+        // Check si lo que espera lo recibe
+        assertEquals(true, estacion.leerTajertaUsuario(autenticacion));
+        // Check de otra manera
+        assertTrue(estacion.leerTajertaUsuario(autenticacion));
     }
 }
