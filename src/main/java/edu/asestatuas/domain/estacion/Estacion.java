@@ -2,6 +2,7 @@ package edu.asestatuas.domain.estacion;
 
 
 import edu.asestatuas.domain.bicicleta.Bicicleta;
+import edu.asestatuas.domain.tarjertausuario.TarjertaUsuario;
 
 import java.util.Objects;
 
@@ -64,5 +65,8 @@ public class Estacion {
     }
     private void mostrarAnclaje(Bicicleta bicicleta, int numeroAnclaje) {
         System.out.println("bicicleta " + bicicleta.getId() + " ancla en el anclaje " + numeroAnclaje);
+    }
+    public boolean leerTajertaUsuario(TarjertaUsuario tarjertaUsuario) {
+        return tarjertaUsuario.isActiva();
     }
 }
