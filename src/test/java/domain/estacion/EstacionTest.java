@@ -33,4 +33,8 @@ public class EstacionTest {
         // Check su direccion
         assertEquals(direccion, "Mallorca 33");
     }
+    @Test
+    public void testToStringEstacion(){
+        assertTrue(estacion.toString().contains(String.valueOf(estacion)));
+    }
 }
