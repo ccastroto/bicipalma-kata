@@ -14,6 +14,7 @@ public class EstacionTest {
     private Anclaje anclaje;
     private  TarjertaUsuario tarjertaUsuario;
     private  Bicicleta bici;
+    private Bicicleta biciDos;
     private static final int ID_ESTACION = 101;
     private static final String direccion = "Mallorca 33";
     private static final int NUM_ANCLAJES = 6;
@@ -23,6 +24,7 @@ public class EstacionTest {
         estacion = new Estacion(ID_ESTACION, direccion, NUM_ANCLAJES);
         anclajes = new Anclajes(NUM_ANCLAJES);
         bici = new Bicicleta(101);
+        biciDos = new Bicicleta(102);
     }
     @Test
     public void testEstacion(){
@@ -44,5 +46,12 @@ public class EstacionTest {
         // Simular si ocupa un anclaje y tiene que tener 1 menos
         assertNotEquals(NUM_ANCLAJES -1, estacion.anclajesLibres());
     }
-
+    @Test
+    public void testAnclarBicicleta(){
+        assertEquals(NUM_ANCLAJES, estacion.anclajesLibres());
+        estacion.anclarBicicleta(bici);
+        assertNotEquals(NUM_ANCLAJES -1, estacion.anclajesLibres());
+        estacion.anclarBicicleta(biciDos);
+        assertNotEquals(NUM_ANCLAJES -1, estacion.anclajesLibres());
+    }
 }
