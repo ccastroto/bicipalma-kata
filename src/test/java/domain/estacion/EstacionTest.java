@@ -37,4 +37,12 @@ public class EstacionTest {
     public void testToStringEstacion(){
         assertTrue(estacion.toString().contains(String.valueOf(estacion)));
     }
+    @Test
+    public void testAnclajesLibres(){
+        // Check si los anclajes están libres
+        assertEquals(NUM_ANCLAJES, estacion.anclajesLibres());
+        // Simular si ocupa un anclaje y tiene que tener 1 menos
+        assertNotEquals(NUM_ANCLAJES -1, estacion.anclajesLibres());
+    }
+
 }
