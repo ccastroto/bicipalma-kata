@@ -3,6 +3,8 @@ package edu.asestatuas.domain.estacion;
 
 import edu.asestatuas.domain.bicicleta.Bicicleta;
 
+import java.util.Objects;
+
 public class Estacion {
 
     private final int id;
@@ -43,11 +45,24 @@ public class Estacion {
         }
         return anclajesLibres;
     }
-
-    public void consultarAnclajes() {
-        System.out.println(this);
-    }
     public void anclarBicicleta(Bicicleta bici) {
-        System.out.println(this);
+        if (Objects.isNull(bici)) {return;}
+
+        int posicion = 0;
+        int numeroAnclaje = posicion + 1;
+
+        for (Anclaje anclaje: anclajes()) {
+            if (!anclaje.isOcupado()) {
+                    anclajes.ocuparAnclaje(posicion, bici);
+                    mostrarAnclaje(bici, numeroAnclaje);
+                    break;
+            } else {
+                posicion++;
+            }
+            numeroAnclaje++;
+        }
+    }
+    private void mostrarAnclaje(Bicicleta bicicleta, int numeroAnclaje) {
+        System.out.println("bicicleta " + bicicleta.getId() + " ancla en el anclaje " + numeroAnclaje);
     }
 }
