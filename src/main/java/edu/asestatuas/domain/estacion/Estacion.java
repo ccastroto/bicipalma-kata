@@ -69,4 +69,38 @@ public class Estacion {
     public boolean leerTajertaUsuario(TarjertaUsuario tarjertaUsuario) {
         return tarjertaUsuario.isActiva();
     }
+    public void retirarBicicleta(TarjertaUsuario tarjertaUsuario) {
+        if (leerTajertaUsuario(tarjertaUsuario)) {
+            boolean biciRetirada = false;
+            while (!biciRetirada) {
+                int posicion = anclajes.seleccionarAnclaje();
+                int numeroAnclaje = posicion + 1;
+
+                if (anclajes.isAnclajeOcupado(posicion)) {
+                    mostrarBicicleta(anclajes.getBiciAt(posicion), numeroAnclaje);
+                    anclajes.liberarAnclaje(posicion);
+                    biciRetirada = true;
+                }
+            }
+        } else {
+            System.out.println("Tajerta de usuario no encontrada:(");
+        }
+    }
+    private void mostrarBicicleta(Bicicleta bicicleta, int numeroAnclaje) {
+        System.out.println("bicicleta retirada: " + bicicleta.getId() + " del anclaje: " + numeroAnclaje);
+    }
+    public void consultarAnclajes() {
+        int posicion = 0;
+        int numeroAnclaje = 0;
+
+        for (Anclaje anclaje : anclajes()) {
+            numeroAnclaje =  posicion + 1;
+            if (anclaje.isOcupado()) {
+                System.out.println("Anclaje " + numeroAnclaje + " " + anclaje.getBici().getId());
+            } else {
+                System.out.println("Anclaje " + numeroAnclaje + " " + " libre");
+            }
+            posicion++;
+        }
+    }
 }
