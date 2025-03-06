@@ -1,6 +1,8 @@
 package edu.asestatuas.appalma;
+
 import edu.asestatuas.domain.estacion.Estacion;
 import edu.asestatuas.domain.bicicleta.Bicicleta;
+import edu.asestatuas.domain.tarjertausuario.TarjertaUsuario;
 
 public class BiciPalma {
     public static void main(String[] args) {
@@ -27,5 +29,32 @@ public class BiciPalma {
 
         System.out.println("anclajes libres tras generar " + bicicletas.length
                 + " bicis: " + estacion.anclajesLibres());
+
+        System.out.println("\n **** caso TEST consultar bicicletas ancladas **** \n");
+        estacion.consultarAnclajes();
+
+
+        System.out.println("\n **** caso TEST retirar bicicleta **** \n");
+
+        TarjertaUsuario tarjertaUsuario = new TarjertaUsuario("000456789", true);
+
+        System.out.println("¿tarjeta de usuario activada? (true/false): "
+                + estacion.leerTajertaUsuario(tarjertaUsuario));
+
+        estacion.retirarBicicleta(tarjertaUsuario);
+
+        estacion.consultarAnclajes();
+
+        System.out.println("anclajesLibres: " + estacion.anclajesLibres());
+
+
+        tarjertaUsuario.setActiva(false);
+
+        System.out.println("¿tarjeta de usuario activada? (true/false): "
+                + estacion.leerTajertaUsuario(tarjertaUsuario));
+
+        estacion.retirarBicicleta(tarjertaUsuario);
+
+        estacion.consultarAnclajes();
     }
 }
